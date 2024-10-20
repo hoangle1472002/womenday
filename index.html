@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuỳ Dương</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
+        integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+        }
+
+        .container svg {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+
+    <!-- aa2 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .body-letter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fae1dd;
+        }
+
+        .letter {
+            position: relative;
+            z-index: 1;
+        }
+
+        .valentines {
+            position: relative;
+            top: 50px;
+            cursor: pointer;
+            animation: up 3s linear infinite;
+        }
+
+        @keyframes up {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .button1 {
+                                width: 42px;
+                                align-items: center;
+                                justify-content: center;
+                                height: 28px;
+                                background: #e48080;
+                            }
+
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #f08080;
+        }
+
+        .envelope:before {
+            background-color: #f08080;
+            content: "";
+            position: absolute;
+            width: 212px;
+            height: 212px;
+            transform: rotate(45deg);
+            top: -105px;
+            left: 44px;
+            border-radius: 30px 0 0 0;
+        }
+
+        .card {
+            position: absolute;
+            background-color: #eae2b7;
+            width: 270px;
+            height: 170px;
+            top: 5px;
+            left: 15px;
+            box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:before {
+            content: "";
+            position: absolute;
+            border: 3px solid #003049;
+            border-style: dotted;
+            width: 240px;
+            heighT: 140px;
+            left: 12px;
+            top: 12px;
+        }
+
+        .text {
+            position: absolute;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 28px;
+            text-align: center;
+            line-height: 25px;
+            top: 19px;
+            left: 85px;
+            color: #003049;
+        }
+
+        .heart {
+            background-color: #d62828;
+            display: inline-block;
+            height: 30px;
+            margin: 0 10px;
+            position: relative;
+            top: 110px;
+            left: 105px;
+            transform: rotate(-45deg);
+            width: 30px;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: #d62828;
+            border-radius: 50%;
+            height: 30px;
+            position: absolute;
+            width: 30px;
+        }
+
+        .heart:before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 15px;
+            top: 0;
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0
+        }
+
+        .one,
+        .two,
+        .three,
+        .four,
+        .five {
+            background-color: red;
+            display: inline-block;
+            height: 10px;
+            margin: 0 10px;
+            position: relative;
+            transform: rotate(-45deg);
+            width: 10px;
+            top: 50px;
+        }
+
+        .one:before,
+        .one:after,
+        .two:before,
+        .two:after,
+        .three:before,
+        .three:after,
+        .four:before,
+        .four:after,
+        .five:before,
+        .five:after {
+            content: "";
+            background-color: red;
+            border-radius: 50%;
+            height: 10px;
+            position: absolute;
+            width: 10px;
+        }
+
+        .one:before,
+        .two:before,
+        .three:before,
+        .four:before,
+        .five:before {
+            top: -5px;
+            left: 0;
+        }
+
+        .one:after,
+        .two:after,
+        .three:after,
+        .four:after,
+        .five:after {
+            left: 5px;
+            top: 0;
+        }
+
+        .one {
+            left: 10px;
+            animation: heart 1s ease-out infinite;
+        }
+
+        .two {
+            left: 30px;
+            animation: heart 2s ease-out infinite;
+        }
+
+        .three {
+            left: 50px;
+            animation: heart 1.5s ease-out infinite;
+        }
+
+        .four {
+            left: 70px;
+            animation: heart 2.3s ease-out infinite;
+        }
+
+        .five {
+            left: 90px;
+            animation: heart 1.7s ease-out infinite;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: translateY(0) rotate(-45deg) scale(0.3);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-150px) rotate(-45deg) scale(1.3);
+                opacity: 0.5;
+            }
+        }
+
+        .front {
+            position: absolute;
+            border-right: 180px solid #f4978e;
+            border-top: 95px solid transparent;
+            border-bottom: 100px solid transparent;
+            left: 120px;
+            top: 5px;
+            width: 0;
+            height: 0;
+            z-index: 10;
+        }
+
+        .front:before {
+            position: absolute;
+            content: "";
+            border-left: 300px solid #f8ad9d;
+            border-top: 195px solid transparent;
+            left: -120px;
+            top: -95px;
+            width: 0;
+            height: 0;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 330px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            top: 265px;
+            left: -15px;
+            animation: scale 3s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes scale {
+
+            0%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            50% {
+                transform: scaleX(0.85);
+            }
+        }
+
+        .hover-animation {
+            animation: hover 1.75s ease-in-out infinite;
+        }
+
+        #castle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fae1dd;
+        }
+
+        .dustDef {
+            position: absolute;
+            background-color: white;
+            border-radius: 100%;
+            box-shadow: 0 0 3px 1px white;
+            opacity: 0;
+        }
+
+        @keyframes hover {
+            0% {
+                margin-top: 60px;
+            }
+
+            50% {
+                margin-top: 50px;
+            }
+
+            100% {
+                margin-top: 60px;
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 25px 0 #e8b2ca;
+            }
+
+            50% {
+                box-shadow: 0 0 45px 0 #e8b2ca;
+            }
+
+            100% {
+                box-shadow: 0 0 25px 0 #e8b2ca;
+            }
+        }
+
+        @keyframes fall {
+            5% {
+                top: 209px;
+                left: 105px;
+                transform: rotate(55deg) scale(0.9, 0.95) skew(-18deg);
+                opacity: 0.9;
+            }
+
+            30% {
+                left: 90px;
+            }
+
+            55% {
+                left: 130px;
+            }
+
+            60%,
+            100% {
+                top: 380px;
+                transform: rotate(30deg) scale(0.9, 0.95) skew(-32deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes floatAnimate {
+            0% {
+                background-size: 105% 120%;
+                background-position: 0 0;
+                opacity: 0.7;
+            }
+
+            50% {
+                background-size: 100% 100%;
+                background-position: 0 0;
+                opacity: 0.5;
+            }
+
+            100% {
+                background-size: 105% 120%;
+                background-position: 0 0;
+                opacity: 0.7;
+            }
+        }
+    </style>
+    <style>
+        svg {
+
+            width: 80%;
+            display: block;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        text {
+            fill: #e6668a;
+            font-family: consolas;
+            font-size: 9px;
+        }
+
+        p {
+            position: absolute;
+            z-index: 2
+        }
+
+        label {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            opacity: .8
+        }
+
+        /* style letter */
+        /* .box-content.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .box-content {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100000000000;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(0.01);
+            visibility: hidden;
+            transition: 0.5s;
+        }
+
+        .fa-xmark {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .fa-xmark:hover {
+            filter: drop-shadow(0 0 10px #fff);
+        }
+
+        .image-decorate {
+            display: flex;
+            width: 700px;
+            z-index: 10;
+            height: 100%;
+        }
+
+        .content1 {
+            position: absolute;
+            width: 700px;
+            height: 500px;
+            background-image: radial-gradient(circle farthest-corner at center, #f9edf3 10%, #ffd3ee 100%);
+            border-radius: 10px 70px 10px 70px;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0);
+            cursor: pointer;
+        }
+
+        .textLetter {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .textLetter h2 {
+            font-size: 30px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .textLetter .contentLetter {
+            font-size: 19px;
+            text-align: center;
+            padding: 0px 30px;
+            margin-top: 10px;
+            font-family: 'Dancing Script', cursive;
+            position: initial;
+
+        } */
+
+
+
+        .letters{
+    position: absolute;
+    width: 65px;
+    transition: 10s ease-in-out;
+    cursor: pointer;
+    z-index: 1000;
+}
+.letters img{
+    width: 100%;
+}
+.wrapperLetterForm{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.boxLetter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxLetter .formLetter{
+    position: relative;
+    width: 800px;
+    height: 550px;
+    background-color: #FFEBEB;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 20px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.formLetter .wrapperLetter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #FF6666;
+    border-radius: inherit;
+    display: flex;
+}
+.boxLetter .before{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    background: #fff;
+    transform: rotate(-15deg);
+    border-radius: 20px;
+    z-index: 10;
+}
+.formLetter .heartLetter{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.heartLetter .heartLetterItem{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: #FF6666;
+}
+.heartLetter:first-child{
+    right: 5px;
+    top: 10px;
+}
+.heartLetter:nth-child(2){
+    left: 5px;
+    bottom: 10px;
+}
+.heartLetterItem::before, .heartLetterItem::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+}
+.heartLetterItem::before{
+    top: -50%;
+}
+.heartLetterItem::after{
+    left: -50%;
+}
+.giftbox{
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+.giftbox .img{
+    position: absolute;
+    width: 180px;
+    bottom: -10px;
+    left: 50px;
+    z-index: 100;
+}
+.giftbox img{
+    width: 80%;
+}
+.textLetter {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .textLetter h2 {
+            font-size: 30px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .textLetter .contentLetter {
+            font-size: 19px;
+            text-align: center;
+            padding: 0px 30px;
+            margin-top: 10px;
+            font-family: 'Dancing Script', cursive;
+            position: initial;
+
+        }
+.fa-xmark{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+}
+.show{
+    display: block;
+}
+.heartAnimation{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+}
+.heartAnimation img{
+    width: 100%;
+}
+.mewmew1, .mewmew2{
+    position: absolute;
+    width: 90px;
+}
+.mewmew1{
+    bottom: 0;
+    left: 0;
+}
+.mewmew2{
+    bottom: 0;
+    right: 0;
+}
+.mewmew1 img, .mewmew2 img{
+    width: 100%;
+}
+#rose-t {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 50%;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <svg style="display: none;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
+        xml:space="preserve">
+        <defs>
+            <filter id="f" filterUnits="userSpaceOnUse" x="-120" y="-30" width="120%" height="120%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"></feGaussianBlur>
+                <feOffset in="blur" dx="3" dy="5" result="shadow"></feOffset>
+                <feFlood flood-color="rgba(3,0,0,1)" result="color" />
+                <feComposite in="color" in2="shadow" operator="in" />
+                <feComposite in="SourceGraphic" />
+            </filter>
+            <path id="shape" d="M0, 21.054 
+       C0, 21.054 24.618, -15.165 60.750, 8.554 
+       C93.249, 29.888 57.749, 96.888 0, 117.388
+       C-57.749, 96.888  -93.249, 29.888 -60.750, 8.554
+       C-24.618, -15.165  -0, 21.054 -0, 21.054z    
+    " />
+            <path id="partialPath" />
+
+        </defs>
+
+        <text dy="-2">
+            <textPath style="font-family: fantasy;" xlink:href="#partialPath" startOffset="12">
+                🌹Happy Vietnamese Women's Day
+                🌹.............................................................................🌹From Hoàng Lê
+                With 20/10!🌹
+            </textPath>
+        </text>
+
+        <use id="useThePath" xlink:href="#partialPath" stroke="white" stroke-width=".5" stroke-opacity=".5" fill="none"
+            style="display:none;" />
+    </svg>
+
+    <script>
+        let rid = null; // request animation id
+        const SVG_NS = "http://www.w3.org/2000/svg";
+        const pathlength = shape.getTotalLength();
+
+        let t = 0; // at the begining of the path
+        let lengthAtT = pathlength * t;
+
+        let d = shape.getAttribute("d");
+
+        // 1. build the d array
+        let n = d.match(/C/gi).length; // how many times
+
+        let pos = 0; // the position, used to find the indexOf the nth C
+
+        class subPath {
+            constructor(d) {
+                this.d = d;
+                this.get_PointsRy();
+                this.previous = subpaths.length > 0 ? subpaths[subpaths.length - 1] : null;
+                this.measurePath();
+                this.get_M_Point(); //lastPoint
+                this.lastCubicBezier;
+                this.get_lastCubicBezier();
+            }
+
+            get_PointsRy() {
+                this.pointsRy = [];
+                let temp = this.d.split(/[A-Z,a-z\s,]/).filter(v => v); // remove empty elements
+                temp.map(item => {
+                    this.pointsRy.push(parseFloat(item));
+                }); //this.pointsRy numbers not strings
+            }
+
+            measurePath() {
+                let path = document.createElementNS(SVG_NS, "path");
+                path.setAttributeNS(null, "d", this.d);
+                // no need to append it to the SVG
+                // the lengths of every path in dry
+                this.pathLength = path.getTotalLength();
+            }
+
+            get_M_Point() {
+                if (this.previous) {
+                    let p = this.previous.pointsRy;
+                    let l = p.length;
+                    this.M_point = [p[l - 2], p[l - 1]];
+                } else {
+                    let p = this.pointsRy;
+                    this.M_point = [p[0], p[1]];
+                }
+            }
+
+            get_lastCubicBezier() {
+                let lastIndexOfC = this.d.lastIndexOf("C");
+                let temp = this.d
+                    .substring(lastIndexOfC + 1)
+                    .split(/[\s,]/)
+                    .filter(v => v);
+                let _temp = [];
+                temp.map(item => {
+                    _temp.push(parseFloat(item));
+                });
+                this.lastCubicBezier = [this.M_point];
+                for (let i = 0; i < _temp.length; i += 2) {
+                    this.lastCubicBezier.push(_temp.slice(i, i + 2));
+                }
+            }
+        }
+
+        let subpaths = [];
+
+        // create new subPaths
+        for (let i = 0; i < n; i++) {
+            // finds the of nth C in d
+            let newpos = d.indexOf("C", pos + 1);
+            if (i > 0) {
+                // if it's not the first C
+                let sPath = new subPath(d.substring(0, newpos));
+                subpaths.push(sPath);
+            }
+            //change the value of the position pos
+            pos = newpos;
+        }
+        // at the end add d to the subpaths array
+        subpaths.push(new subPath(d));
+
+        // 2. get the index of the bezierLengths where the point at t is
+        let index;
+        for (index = 0; index < subpaths.length; index++) {
+            if (subpaths[index].pathLength >= lengthAtT) {
+                break;
+            }
+        }
+
+        function get_T(t, index) {
+            let T;
+            lengthAtT = pathlength * t;
+            if (index > 0) {
+                T =
+                    (lengthAtT - subpaths[index].previous.pathLength) /
+                    (subpaths[index].pathLength - subpaths[index].previous.pathLength);
+            } else {
+                T = lengthAtT / subpaths[index].pathLength;
+            }
+            //console.log(T)
+            return T;
+        }
+
+        let T = get_T(t, index);
+
+        let newPoints = getBezierPoints(T, subpaths[index].lastCubicBezier);
+
+        drawCBezier(newPoints, partialPath, index);
+
+        function getBezierPoints(t, points) {
+            let helperPoints = [];
+
+            // helper points 0,1,2
+            for (let i = 1; i < 4; i++) {
+                //points.length must be 4 !!!
+                let p = lerp(points[i - 1], points[i], t);
+                helperPoints.push(p);
+            }
+
+            // helper points 3,4
+            helperPoints.push(lerp(helperPoints[0], helperPoints[1], t));
+            helperPoints.push(lerp(helperPoints[1], helperPoints[2], t));
+
+            // helper point 5 is where the first Bézier ends and where the second Bézier begins
+            helperPoints.push(lerp(helperPoints[3], helperPoints[4], t));
+
+            // points for the dynamic bézier
+            let firstBezier = [
+                points[0],
+                helperPoints[0],
+                helperPoints[3],
+                helperPoints[5]
+            ];
+            //console.log(firstBezier)
+            return firstBezier;
+        }
+
+        function lerp(A, B, t) {
+            let ry = [
+                (B[0] - A[0]) * t + A[0], //x
+                (B[1] - A[1]) * t + A[1] //y
+            ];
+            return ry;
+        }
+
+        function drawCBezier(points, path, index) {
+            let d;
+
+            if (index > 0) {
+                d = subpaths[index].previous.d;
+            } else {
+                d = `M${points[0][0]},${points[0][1]} C`;
+            }
+
+            // points.length == 4
+            for (let i = 1; i < 4; i++) {
+                d += ` ${points[i][0]},${points[i][1]} `;
+            }
+            //console.log(d)
+            partialPath.setAttributeNS(null, "d", d);
+        }
+    </script>
+
+    <div id="castle" style="display: none;">
+        <div class="letter">
+            <div class="valentines">
+                <div class="envelope"></div>
+                <div class="front"></div>
+                <div class="card">
+                    <div class="text">Happy</br> Women's</br> Day!</div>
+                    <div class="heart"></div>
+                </div>
+                <div class="hearts">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                    <div class="four"></div>
+                    <div class="five"></div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+
+    </div>
+
+
+    <div class="container" id="rose-t">
+        <svg class="svg-container" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+            <line class="line line--left" x1="10" y1="17" x2="10" y2="183"> </line>
+            <line class="line line--rght" x1="490" y1="17" x2="490" y2="183"> </line>
+            <g>
+                <path class="lttr lttr--I" d="M42.2,73.9h11.4v52.1H42.2V73.9z"></path>
+                <path class="lttr lttr--L" d="M85.1,73.9h11.4v42.1h22.8v10H85.1V73.9z"></path>
+                <path class="lttr lttr--O" d="M123.9,100c0-15.2,11.7-26.9,27.2-26.9s27.2,11.7,27.2,26.9s-11.7,26.9-27.2,26.9S123.9,115.2,123.9,100zM166.9,100c0-9.2-6.8-16.5-15.8-16.5c-9,0-15.8,7.3-15.8,16.5s6.8,16.5,15.8,16.5C160.1,116.5,166.9,109.2,166.9,100z"> </path>
+                <path class="lttr lttr--V" d="M180.7,73.9H193l8.4,22.9c1.7,4.7,3.5,9.5,5,14.2h0.1c1.7-4.8,3.4-9.4,5.2-14.3l8.6-22.8h11.7l-19.9,52.1h-11.5L180.7,73.9z"></path>
+                <path class="lttr lttr--E" d="M239.1,73.9h32.2v10h-20.7v10.2h17.9v9.5h-17.9v12.4H272v10h-33V73.9z"></path>
+                <path class="lttr lttr--Y" d="M315.8,102.5l-20.1-28.6H309l6.3,9.4c2,3,4.2,6.4,6.3,9.6h0.1c2-3.2,4.1-6.4,6.3-9.6l6.3-9.4h12.9l-19.9,28.5v23.6h-11.4V102.5z"></path>
+                <path class="lttr lttr--O2" d="M348.8,100c0-15.2,11.7-26.9,27.2-26.9c15.5,0,27.2,11.7,27.2,26.9s-11.7,26.9-27.2,26.9C360.5,126.9,348.8,115.2,348.8,100z M391.8,100c0-9.2-6.8-16.5-15.8-16.5c-9,0-15.8,7.3-15.8,16.5s6.8,16.5,15.8,16.5C385,116.5,391.8,109.2,391.8,100z"></path>
+                <path class="lttr lttr--U" d="M412.4,101.1V73.9h11.4v26.7c0,10.9,2.4,15.9,11.5,15.9c8.4,0,11.4-4.6,11.4-15.8V73.9h11v26.9c0,7.8-1.1,13.5-4,17.7c-3.7,5.3-10.4,8.4-18.7,8.4c-8.4,0-15.1-3.1-18.8-8.5C413.4,114.2,412.4,108.5,412.4,101.1z"></path>
+            </g>
+            </svg>
+            <div class="mo-container"> </div>
+            <image href="/image//hltd.HEIC"></image>
+        <p id="text-click" style=" display: none;   font-family: fantasy;
+        color: indianred;
+        font-size: 50px;
+        top: 80%;">Click</p>
+    </div>
+        <div class="wrapperLetterForm" style="display: none;">
+            <div class="boxLetter">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="formLetter">
+                    <div class="heartLetter">
+                        <div class="heartLetterItem"></div>
+                    </div>
+                    <div class="heartLetter">
+                        <div class="heartLetterItem"></div>
+                    </div>
+                    
+                    <div class="wrapperLetter">
+                        <div class="giftbox">
+                            <div class="img">
+                                <img src="./image/giftbox.png" alt="">
+                            </div>
+                        </div>
+                        <div class="textLetter">
+                            <h2></h2>
+                            <p class="contentLetter"></p>
+                            <div class="heartAnimation">
+                                <img src="./image/heartAnimation.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="mewmew1">
+                            <img src="./image/mewmew.gif" alt="">
+                        </div>
+                        <div class="mewmew2">
+                            <img src="./image/mewmew.gif" alt="">  
+                            <!-- <button class="button1" onclick="window.location.href='https://duykhanh06.x10.mx/';">🎁</button> -->
+                            <script>
+                                function redirectToPage() {
+                                    window.location.href = "C:\Users\tkhan\Desktop\PhaoHoa2023-master\index.html";
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="before"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- aa3 -->
+    <script>
+
+        (() => {
+            setTimeout(() => {
+                document.querySelector("#text-click").style.display = "inherit";
+            }, 4000);
+            document.querySelector("#rose-t").onclick = function () {
+                document.querySelector("#rose-t").style.display = "none";
+                document.querySelector("#castle").style.display = "flex";
+                document.querySelector("#theSvg").style.display = "inherit"
+
+                rid = window.requestAnimationFrame(Typing);
+                function Typing() {
+                    rid = window.requestAnimationFrame(Typing);
+                    if (t >= 1) {
+                        window.cancelAnimationFrame(rid);
+                        rid = null;
+                    } else {
+                        t += 0.0025;
+                    }
+
+                    lengthAtT = pathlength * t;
+                    for (index = 0; index < subpaths.length; index++) {
+                        if (subpaths[index].pathLength >= lengthAtT) {
+                            break;
+                        }
+                    }
+                    T = get_T(t, index);
+                    newPoints = getBezierPoints(T, subpaths[index].lastCubicBezier);
+                    drawCBezier(newPoints, partialPath, index);
+                }
+            }
+            const head = document.getElementsByTagName('head')[0];
+            let animationId = 1;
+
+            function CreateMagicDust(x1, x2, y1, y2, sizeRatio, fallingTime, animationDelay, node = 'main') {
+                let dust = document.createElement('span');
+                let animation = document.createElement('style');
+                animation.innerHTML = '\
+      @keyframes blink' + animationId + '{\
+          0% {\
+              top: ' + y1 + 'px;\
+              left: ' + x1 + 'px;\
+              width: ' + 2 * sizeRatio + 'px;\
+              height: ' + 2 * sizeRatio + 'px;\
+              opacity: .4\
+          }\
+          20% {\
+              width: ' + 4 * sizeRatio + 'px;\
+              height: ' + 4 * sizeRatio + 'px;\
+              opacity: .8\
+          }\
+          35% {\
+              width: ' + 2 * sizeRatio + 'px;\
+              height: ' + 2 * sizeRatio + 'px;\
+              opacity: .5\
+          }\
+          55% {\
+              width: ' + 3 * sizeRatio + 'px;\
+              height: ' + 3 * sizeRatio + 'px;\
+              opacity: .7\
+          }\
+          80% {\
+              width: ' + sizeRatio + 'px;\
+              height: ' + sizeRatio + 'px;\
+              opacity: .3\
+          }\
+          100% {\
+              top: ' + y2 + 'px;\
+              left: ' + x2 + 'px;\
+              width: ' + 0 + 'px;\
+              height: ' + 0 + 'px;\
+              opacity: .1\
+          }}';
+                head.appendChild(animation);
+                dust.classList.add('dustDef');
+                dust.setAttribute('style', `animation: blink${animationId++} ${fallingTime}s cubic-bezier(.71, .11, .68, .83) infinite ${animationDelay}s`);
+                document.getElementById(node).appendChild(dust);
+            }
+
+            // yes, I'm doing it manually to get the effect I want.. can be easily changed to render randomly
+            [[130, 132, 150, 152, .15, 2.5, .1, 'sub'],
+            [65, 63, 300, 299, .5, 2, .2, 'sub'],
+            [70, 70, 150, 150, .45, 2, .5],
+            [75, 78, 160, 170, .6, 2, 1],
+            [80, 82, 160, 180, .6, 1, .4],
+            [85, 100, 160, 170, .5, 2, .5],
+            [125, 110, 170, 180, .25, 3, 1.5],
+            [90, 90, 115, 115, .4, 2, 2],
+            [93, 95, 200, 200, .4, 3, 1.5],
+            [100, 100, 145, 155, .45, 1, .5],
+            [100, 90, 170, 230, .35, 2, .75],
+            [100, 102, 115, 112, .35, 3, .25],
+            [100, 95, 170, 200, .55, 1.5, .75],
+            [100, 97, 150, 190, .7, 2, 1.5],
+            [105, 100, 160, 180, .5, 1.5, .725],
+            [125, 125, 180, 190, .25, 1, .725],
+            [130, 130, 135, 135, .45, 3, 1.5],
+            [135, 132, 170, 190, .25, 2.5, .75],
+            [135, 132, 320, 315, .2, 5, .3, 'sub']
+            ].forEach((o) => CreateMagicDust(...o));
+
+        })();
+    </script>
+
+    <script>
+        // .textLetter text h2
+        let indexText = 0;
+        let textLetter = document.querySelector('.textLetter h2');
+        const textLetterH2 = "Happy Vietnamese Women's Day!";
+        let timoutTextLetter;
+
+        function textCharLetter() {
+            if (indexText < textLetterH2.length) {
+                textLetter.textContent += textLetterH2[indexText];
+                indexText++;
+                setTimeout(indexText, 100);
+            }
+            else {
+                clearInterval(timoutTextLetter);
+                setTimeout(() => {
+                    funcTimeoutLetterContent()
+                }, 500)
+            }
+        }
+        function funcTimeoutLetter() {
+            indexText = 0; // Reset indexText
+            textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
+            clearInterval(timoutTextLetter);
+            timoutTextLetter = setInterval(() => {
+                textCharLetter();
+            }, 200)
+        }
+
+        // chữ của thư bạn muốn gửi
+        let indexTextContent = 0;
+        let textLetterContent = document.querySelector('.contentLetter');
+        const textLetterP = "Hello công chúa Thuỳ Dương của tui. Nhân dịp Ngày Phụ nữ Việt Nam 20/10 Lê Hoàng xin gửi đến bé Dương những lời yêu thương từ trái tim mình. Cảm ơn Thuỳ Dương đã xuất hiện trong cuộc đời LH và mang lại cho LH những giây phút hạnh phúc nhất. Chúc bé yêu luôn xinh đẹp, hạnh phúc, thành công trong mọi việc và quan trọng hơn hết là sẽ yêu thương LH nhiều hơn nữa nhaaa. Mãi yêu baby của tuiii 💗";
+        let timoutTextLetterContent;
+        function textCharLetterContent() {
+            if (indexTextContent < textLetterP.length) {
+                textLetterContent.textContent += textLetterP[indexTextContent];
+                indexTextContent++;
+                setTimeout(indexTextContent, 0.16);
+            }
+            else {
+                clearInterval(timoutTextLetterContent)
+
+            }
+        }
+        function funcTimeoutLetterContent() {
+            indexTextContent = 0; // Reset indexTextContent
+            textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
+            clearInterval(timoutTextLetterContent);
+            timoutTextLetterContent = setInterval(() => {
+                textCharLetterContent();
+            }, 100)
+        }
+        $(document).ready(function () {
+            $('.valentines').mouseenter(function () {
+                $('.card').stop().animate({
+                    top: '-90px'
+                }, 'slow');
+            }).mouseleave(function () {
+                $('.card').stop().animate({
+                    top: 0
+                }, 'slow');
+            });
+
+            $('.card').click(function () {
+                $('.box-content').addClass('active');
+                $(".wrapperLetterForm").fadeIn()
+                funcTimeoutLetter();
+            });
+
+            $('.fa-xmark').click(function () {
+                $('.wrapperLetterForm').css('display','none');
+            });
+        });
+        var leafOne = document.querySelector('.leafOne');
+        var stickLine = document.querySelector('.stickLine');
+        var leafTwo = document.querySelector('.leafTwo');
+        var leafS1 = document.querySelector('.leafS1');
+        var rose1 = document.querySelector('.rose1');
+        var rose2 = document.querySelector('.rose2');
+        var rose3 = document.querySelector('.rose3');
+        var rose4 = document.querySelector('.rose4');
+
+        var lineDrawing = anime({
+            targets: [leafOne, stickLine, leafTwo, leafS1, rose1, rose2, rose3, rose4],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 4000,
+            begin: function (anim) {
+                //Leaf One
+                leafOne.setAttribute("stroke", "black");
+                leafOne.setAttribute("fill", "none");
+                // Leaf Two
+                leafTwo.setAttribute("stroke", "black");
+                leafTwo.setAttribute("fill", "none");
+                //Stick
+                stickLine.setAttribute("stroke", "black");
+                stickLine.setAttribute("fill", "none");
+                // Leaf S1
+                leafS1.setAttribute("stroke", "black");
+                leafS1.setAttribute("fill", "none");
+                //Rose One
+                rose1.setAttribute("stroke", "black");
+                rose1.setAttribute("fill", "none");
+                //Rose Two
+                rose2.setAttribute("stroke", "black");
+                rose2.setAttribute("fill", "none");
+                //Rose Three
+                rose3.setAttribute("stroke", "black");
+                rose3.setAttribute("fill", "none");
+                //Rose Three
+                rose4.setAttribute("stroke", "black");
+                rose4.setAttribute("fill", "none");
+            },
+            complete: function (anim) {
+                //Leaf One
+                leafOne.setAttribute("fill", "#9CDD05");
+                leafOne.setAttribute("stroke", "none");
+                //Leaf Two 
+                leafTwo.setAttribute("fill", "#9CDD05");
+                leafTwo.setAttribute("stroke", "none");
+                //Stick
+                stickLine.setAttribute("fill", "#83AA2E");
+                stickLine.setAttribute("stroke", "none");
+                // Leaf S1
+                leafS1.setAttribute("fill", "#9CDD05");
+                leafS1.setAttribute("stroke", "none");
+                // Rose 1
+                rose1.setAttribute("fill", "#F37D79");
+                rose1.setAttribute("stroke", "none");
+                // Rose 2
+                rose2.setAttribute("fill", "#D86666");
+                rose2.setAttribute("stroke", "none");
+                // Rose 3
+                rose3.setAttribute("fill", "#F37D79");
+                rose3.setAttribute("stroke", "none");
+                // Rose 3
+                rose4.setAttribute("fill", "#D86666");
+                rose4.setAttribute("stroke", "none");
+            },
+            autoplay: true,
+        });
+
+    </script>
+</body>
+
+</html>
